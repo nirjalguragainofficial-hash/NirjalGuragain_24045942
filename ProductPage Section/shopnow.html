@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Now - Ghadi</title>
+    <style>
+        body{
+            font-family: 'Helveica Neue', Arial, sans-serif;
+            margin:0;
+            padding:0;
+            background-color: #f4f4f4;
+        } 
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        .container {
+            width: 90%;
+            margin: 40px auto;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            padding: 15px;
+            width: 60%;
+            border: 1px solid #ddd;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+            font-size: 1em;
+        }
+        .search-bar botton {
+            padding: 15px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 0 5px 5px 0;
+            font-size: 1em;
+        }
+        .filters {
+            display:flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .filters label,
+        .filters select {
+            font-size: 1.1em;
+        }
+        .products{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .product-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 18%;
+            margin: 20px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+           
+                }
+                .product-card:hover {
+                    transform: translateY(-10px);
+                    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+                }
+
+                .product-card img {
+                    width: 100%;
+                    height: auto;
+                    border-bottom: 1px solid #ddd;
+                    padding-bottom: 15px;
+                    margin-bottom: 15px;
+                    border-radius: 10px;
+                }
+                .product-card h2 {
+                    color: #333;
+                    font-size: 1.5em;
+                    margin: 10px 0;
+                }
+                .product-card p {
+                    color:#777;
+                    font-size: 1.1em;
+                    margin: 10px 0;
+                }
+                
+            
+                .botton {
+                    display: inline-block;
+                    text-decoration: none;
+                    color: #fff;
+                    background-color: #333;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    transition: background-color 0.3s ease;
+                    font-size: 1em;
+                    cursor: pointer;
+                }
+                .botton:hover {
+                    background-color: #555;
+                }
+                footer {
+                    background-color: #333;
+                    color: #fff;
+                    text-align: center;
+                    padding: 20px 0;
+                    margin-top: 20px;
+                }
+                .social-media a{
+                    color: #fff;
+                    margin: 0 10px;
+                    text-decoration: none;
+                    font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Shop Now - Ghadi</h1>
+    </header>
+    <div class="container">
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search for products...">
+            <botton>Search</botton>
+    </div>
+    <div class="filters">
+
+        <div>
+            <label for="category">Category:</label>
+            <select id="category">
+                <option>All</option>
+                <option>Watches</option>
+                <option>Men</option>
+                <option>Women</option>
+                <option>Childrens</option>
+            </select>
+        </div>
+
+    <div>
+        <label for="sort">Sort By</label>
+        <select id="Sort">
+        <option>Popularity</option>
+        <option>Price: Low to High</option>
+        <option>Price: Low to High</option>
+        </select>
+    </div>
+    </div>
+    <div class="products">
+        <div class="product-card">
+            <a href="/BLOGPAGE/html/yoz.html"><img src="/ProductPage Section/yazole.jpg" alt="product 1"> </a> 
+            <h2>YAZOLE</h2>
+         <P>Premium Classic Watch</P>
+         <p><strong>Price: Rs.5,800/-</strong></p>
+         <botton class="botton add-to-cart">Add to Cart</botton>
+         <botton class="botton buy">Buy Now</botton>
+         <P>⭐⭐⭐⭐⭐</P>
+            <p>"Beautiful Design!" - Sonam Acharya</p>
+        </div>
+        <div class="product-card">
+            <a href="/BLOGPAGE/html/oli.html"><img src="OLEVS.jpg" alt="product 2"></a>
+            <h2>OLVES</h2>
+            <P>Stainless Steel</P>
+            <p><strong>Price: Rs.7,000/-</strong></p>
+            <botton class="botton add-to-cart">Add to Cart</botton>
+            <botton class="botton buy">Buy Now</botton> 
+            <P>⭐⭐⭐⭐🟌</P>
+            <p>"Great product!" - Hari Bahadur</p>
+    </div>
+    <div class="product-card">
+        <a href="/BLOGPAGE/html/zod.html"> <img src="swiss.jpg" alt="product 3"></a>
+        <h2>SWISS</h2>
+        <P>Leather Belt Waterproof</P>
+        <p><strong>Price: Rs.5,800/-</strong></p>
+        <botton class="botton add-to-cart">Add to Cart</botton>
+        <botton class="botton buy">Buy Now</botton>     
+        <P>⭐⭐⭐🟌🟌</P>
+            <p>"Nice Watch!" - Tarzan Mougli</p> 
+    </div>
+    <div class="product-card">
+        <a href="/BLOGPAGE/html/mk.html"> <img src="michael.jpg" alt="product 4"> </a>
+        <h2>MICHAEL KORS</h2>
+        <P>Premium Ladies Watch </P>
+        <p><strong>Price: Rs.3,500/-</strong></p>
+        <botton class="botton add-to-cart">Add to Cart</botton>
+        <botton class="botton buy">Buy Now</botton>   
+        <P>⭐⭐⭐⭐⭐</P>
+        <p>"Premium Design!" - Denish Shrestha</p>   
+    </div>
+    <div class="product-card">
+        <a href="/BLOGPAGE/html/rolex.html"> <img src="rolex1.jpg" alt="product 5"> </a>
+        <h2>ROLEX</h2>
+        <P>Rolex Submariner Steelness Steel  </P>
+        <p><strong>Price: Rs.12,000/-</strong></p>
+        <botton class="botton add-to-cart">Add to Cart</botton>
+        <botton class="botton buy">Buy Now</botton>    
+        <P>⭐⭐⭐🟌🟌</P>
+        <p>"Beautiful Design!" - Sapana Bhattarai</p>  
+       </div>
+
+       <div class="product-card">
+        <a href="/BLOGPAGE/html/rolex.html"> <img src="Timex Titanium.png" alt="product 6"> </a>
+        <h2>TIMEX</h2>
+        <P>Expedition Titanium Automatic</P>
+        <p><strong>Price: Rs.6,000/-</strong></p>
+        <botton class="botton add-to-cart">Add to Cart</botton>
+        <botton class="botton buy">Buy Now</botton>    
+        <P>⭐⭐⭐⭐🟌</P>
+        <p>"I love this Product!" - Krishna Kadel</p>  
+       </div>
+
+       <div class="product-card">
+        <a href="/BLOGPAGE/html/rolex.html"> <img src="Casio Digital.png" alt="product 7"> </a>
+        <h2>CASIO</h2>
+        <P>Waterproof Digital silicon</P>
+        <p><strong>Price: Rs.9,800/-</strong></p>
+        <botton class="botton add-to-cart">Add to Cart</botton>
+        <botton class="botton buy">Buy Now</botton>    
+        <P>⭐⭐⭐⭐🟌</P>
+        <p>"Thankyou for the quality!" - Anjel Pradhan</p>  
+</div>
+
+<div class="product-card">
+    <a href="/BLOGPAGE/html/rolex.html"> <img src="Edifice.png" alt="product 8"> </a>
+    <h2>EDIFICE</h2>
+    <P>Stainless Steel </P>
+    <p><strong>Price: Rs.13,750/-</strong></p>
+    <botton class="botton add-to-cart">Add to Cart</botton>
+    <botton class="botton buy">Buy Now</botton>    
+    <P>⭐⭐⭐⭐🟌</P>
+    <p>"Good quality!" - Ram Bahadur Khadka</p>  
+</div>
+<div class="product-card">
+    <a href="/BLOGPAGE/html/rolex.html"> <img src="BOLANO.jpeg" alt="product 9"> </a>
+    <h2>BOLANO</h2>
+    <P>Stainless Steel Waterproof </P>
+    <p><strong>Price: Rs.1,750/-</strong></p>
+    <botton class="botton add-to-cart">Add to Cart</botton>
+    <botton class="botton buy">Buy Now</botton>    
+    <P>⭐⭐⭐⭐⭐</P>
+    <p>"Great product!" - Rekha Thapa</p>  
+</div>
+<div class="product-card">
+    <a href="/BLOGPAGE/html/rolex.html"> <img src="GENEVA.jpeg" alt="product 10"> </a>
+    <h2>GENEVA</h2>
+    <P>Black Sefer Premium lock </P>
+    <p><strong>Price: Rs.3,950/-</strong></p>
+    <botton class="botton add-to-cart">Add to Cart</botton>
+    <botton class="botton buy">Buy Now</botton>    
+    <P>⭐⭐⭐⭐⭐</P>
+    <p>"It's comfortable Thankyou!" -Sanoj Shah</p>
+</div>
+<div class="product-card">
+    <a href="/BLOGPAGE/html/rolex.html"> <img src="ORK watch.jpeg" alt="product 11"> </a>
+    <h2>ORK</h2>
+    <P>Metal Stainless Steel Ceramic </P>
+    <p><strong>Price: Rs.5,700/-</strong></p>
+    <botton class="botton add-to-cart">Add to Cart</botton>
+    <botton class="botton buy">Buy Now</botton>    
+    <P>⭐⭐⭐⭐🟌</P>
+    <p>" Thankyou for free Delivery!" -Rocky Lamsal</p>
+</div>
+<div class="product-card">
+    <a href="/BLOGPAGE/html/rolex.html"> <img src="LGA.jpeg" alt="product 12"> </a>
+    <h2>LIGA</h2>
+    <P>Metal Stainless Steel Ceramic </P>
+    <p><strong>Price: Rs.4,500/-</strong></p>
+    <botton class="botton add-to-cart">Add to Cart</botton>
+    <botton class="botton buy">Buy Now</botton>    
+    <P>⭐⭐🟌🟌🟌</P>
+    <p>"Not as expected!" -Marco Bhaskar</p>
+</div>
+    </div>
+<footer>
+    <p>&copy;2025 Ghadi.All rights reserved.</p>
+    <div class="social-media">
+    <a href="#">Facebook</a>
+    <a href="#">Instagram</a>
+    <a href="#">Twitter</a>
+    </div>
+</footer>
+</body>
+</html>

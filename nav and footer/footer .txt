@@ -1,0 +1,43 @@
+<!--footer section-->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer__col">
+        <h4>Company</h4>
+          <ul>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">our brand </a></li>
+            <li><a href="#">signature artist</a></li>
+            <li><a href="#">privacy policy</a></li>
+          </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Get Help</h4>
+          <ul>
+            <li><a href="#">text support</a></li>
+            <li><a href="#">call support</a></li>
+            <li><a href="#">refund</a></li>
+            <li><a href="#">technical problem</a></li>
+          </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Online Shop </h4>
+          <ul>
+            <li><a href="#">product</a></li>
+            <li><a href="#">shop now</a></li>
+            <li><a href="#">brand</a></li>
+            <li><a href="#">Cart</a></li>
+          </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Follow Us</h4>
+          <div class="social__links">
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+          </div>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--connecting with css-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Blog page 
+  </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+  integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+  crossorigin="anonymous" 
+  referrerpolicy="no-referrer" /> <!--follow us ko lagi hoo yaoh-->
+  
+    <title>Ghadi- Luxury Watch Collection</title>
+    <style>
+        body {
+         background-image: url('back paghe.png');
+         background-size: cover;
+         background-repeat: no-repeat;
+         background-position: center;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100vw;
+            
+        }
+
+        /*banner*/
+
+        .banner {
+            background-color:rgb(24, 158, 248);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding:10px 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+        .banner img {
+            height: 50px;
+            margin-right: 30px;
+        }
+        .banner text {
+            flex-grow: 1;
+            font-size: 1.5em;
+            text-align: center;
+        }
+        .banner .shop-now {
+            background-color:wheat;
+            color: #2b2c21;
+            padding: 10px 20px;
+            text-decoration:none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+        }
+        .banner .shop-now:hover {
+            background-color: gold;
+            transform: scale(1.05);
+        }
+
+        /*return policy currior*/
+
+        .shipping-info {
+            text-align: center;
+            background-color: #fff;
+            padding: 15px;
+            margin:20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4 px rgba(0,0,0,0.1);
+        }
+
+        /*navigation bar*/
+ 
+     .nav1, .nav2 {
+    width: 100%; 
+    box-sizing: border-box; 
+    width: 100vw;
+    
+    margin: 20px auto; 
+    padding: 15px 10px; 
+    background-color: #e0e0e0;
+    text-align:center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}        
+/*  
+        .nav1 {
+            background-color: #e0e0e0;
+            padding: 15px 0;
+            margin: 20px 0;
+            text-align:center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            
+        }
+        .nav2 {
+            background-color: #fcf8f8;
+            padding: 15px 0;
+            margin: 20px 0;
+            text-align:center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        */
+        .nav1 ul, .nav2 ul {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        /* .nav1 ul { 
+            list-style: none;
+            padding: 10;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+      .nav2 ul {
+            list-style: none;
+            padding: 10;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+         */
+        nav ul li a {
+            text-decoration: none;
+            color: #1e1b18;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: #f8f4ff;
+        }
+
+        /*container of products*/
+
+        .container {
+            display:flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 20px;
+            width: 90%;
+            margin: 40px auto;
+            max-width: 1400px;
+        }
+        /*product details*/
+        .product{
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3sec ease;
+            width: calc(28% - 20px);
+        }
+        .product:hover {
+            transform: translateY(-5px);
+
+        }
+        .product img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .product h3 {
+            color: #333;
+            margin: 10px 0;
+        }
+        .product .specs {
+            text-align: left;
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #f8f8f8;
+            border-radius: 5px;
+        }
+        .product .specs p {
+            margin: 5px;
+            font-size: 0.9em;
+            color: #381212;
+        }
+        .product .price {
+            font-size: 1.5em;
+            color: #6a0dad;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        /*buy botton*/
+
+        .button {
+            display: inline-block;
+                    text-decoration: none;
+                    color: #fff;
+                    background-color: #444;
+                    padding: 12px 25px;
+                    border-radius: 8px;
+                    transition: background-color 0.3s ease;
+                    font-size: 1.1em;
+        }
+        .button.buy {
+            background-color: #00aaff;
+            color: white;
+            margin-right: 10px;
+        }
+        .button.buy:hover {
+            background-color: #00bbff;
+            transform: scale(1.05);
+        }
+    
+    /*searchbar nav*/
+    
+   nav {
+            background-color: #ffffff;
+            padding: 15px 0;
+            margin: 20px 0;
+
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+  nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display:flex;
+            justify-content: center;
+            gap: 30px;
+        }
+      nav ul li a {
+            text-decoration: none;
+            color: #b73ab7;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: #ffffff;
+        }
+        nav {
+            background-color: #fff;
+            padding: 15px 0;
+            margin: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: #736884;
+        }
+
+        /*search bar*/
+
+        .searchbar {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1px;
+            padding-left: 0px;
+
+        }
+        .searchbar input[type="text"] {
+            padding: 10px;
+            width: 200px;
+            border-radius: 5px 0 0 5px;
+            border: 1px solid #190606;
+            font-size: 1em;
+        }
+        .searchbar button {
+            padding: 10px 15px;
+            background-color: #69646d;
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 0 5px 5px 0;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        /*footer css*/
+  .container{
+    max-width: 1170px;
+    margin: auto;
+  }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  ul{
+    list-style: none;
+  }
+  
+  .footer__col{
+    width: 20%;
+    padding: 0 15px;
+  }
+  .footer__col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+    text-decoration:underline #e91e63;
+  }
+  /* .footer__col h4::before{
+    content: '';
+    position: absolute;
+    height: 2px;
+    left: 10;
+    bottom: -10px;
+    text-decoration:underline #e91e63;
+    box-sizing: border-box;
+    width: 50px;
+  } */
+  .footer__col ul li :not(:last-child){
+     margin-bottom: 10px;
+  }
+  .footer__col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer__col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+  }
+  .footer__col .social__links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+  }
+  .footer__col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+  }
+  .social__links{
+    color: #ffffff;
+    cursor: pointer;
+  }
+    /*footer*/
+    footer {
+        width: 100%;
+        color: none;
+        text-align: center;
+        padding: 20px 0;          
+        margin-top: 20px; 
+       background-color: black;
+       }  
+        .footercontainer {
+            display:flex;
+            justify-content: space-evenly;
+            height: auto;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            width: 100%;
+            margin: 40px auto;
+            max-width: 1400px;
+        } 
+ 
+  
+    </style>
+</head>
+<body>
+
+     <header>
+        <h1>Welcome to Ghadi</h1>
+        <h2>Explore Our Exclusive Watch Collection</h2>
+        <nav class="nav1">
+            <ul>
+            <div class="searchbar">
+                <input type="text" placeholder="Search...">     
+                <button type="submit"><i class='bx bx-search-alt'></i></button>
+                
+        </div> 
+            <ul class="ul"> 
+                <li><a href="/HomePage Section/home.html">Home</a></li>
+                <li><a href="/BLOGPAGE/html/BLOGPAGE.html">Blog</a></li>
+                <li><a href="/About Us/About.html">About</a></li>
+                <li><a href="/DescriptionPage/html/gmt.html">Description</a></li>
+                <li><a href="/Account/account.html">Account</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class ="banner">
+        <div class="images">
+            <img src="QUARTZS.png" alt="Watch">
+            <img src="white1.png" alt="Watch">
+            <img src="/ProductPage Section/winter sale.png" alt="Sale">
+    </div>
+    <div class="text">
+        WINTER SALE UP TO 75% OFF
+    </div>
+    <a href="shopnow.html" class="shop-now">SHOP NOW</a>
+    </div>
+    <div class="shipping-info">
+        <p>🚚Shipping: Free Shipping on orders over Rs.1200/-</p>
+    <p>↩️Return Policy: 30-days money-back guarantee.</p>
+    </div>
+    
+    <nav class="nav2">
+        <ul>
+            <li><a href="#tudor black bay">Tudar</a></li>
+            <li><a href="#rolex cellini">Rolex</a></li>
+            <li><a href="#tag heuer monaco">TAG Heuer</a></li>
+            <li><a href="#panerai luminor">Panerai</a></li>
+        </ul>
+    </nav>
+
+    <div class="container" id="products">
+          <div class="product" id="Tudar Black Bay"> 
+        <a href="/DescriptionPage/html/zod.html"> <img src="thumbnail.jpeg" alt="Tudar Black Bay"> </a>
+            <h3>A Watch with a variety of features that pay homage to the brand's history.</h3>
+            <div class="specs" >
+            <p>✨ Movement: Japanese Quartz Movement</p>
+            <p>⌚ Case Material: Stainless Steel</p>
+            <p>🎯 Case Diameter: 42mm</p>
+            <p>💧 Water Resistance: 3ATM</p>
+            <p>🔋 Battery Life: 2 years</p>
+            <p>⚡ Power Reserve: 8 hours</p>
+            </div>
+        <div class="price">999.99$</div>
+        <a href="#buy" class="button buy">Add to Cart</a>
+    </div>
+    <div class="product" id="Tag Heuer Monaco">
+        <a href="/BLOGPAGE/html/tag heuer.html">  <img src="thumbnail (1).jpeg" alt="Tag Heuer Monaco"> </a>
+        <h3>A renowned luxury watch,instantly recognizable for its bold,square-shaped case design.</h3>
+        <div class="specs" >
+        <p>✨ Movement: Quartz chronograph</p>
+        <p>⌚ Case Material: Square antique</p>
+        <p>🎯 Case Diameter: 38mm</p>
+        <p>💧 Water Resistance: 5ATM</p>
+        <p>⚡ Power Reserve: 38 hours</p>
+        <p>🔋 Battery Life: 4 years</p>
+        </div>
+    <div class="price">1000$</div>
+    <a href="#buy" class="button buy">Add to Cart</a>
+</div>
+<div class="product" id="Rolex Cellini">
+    <a href="/BLOGPAGE/html/rolex.html"> <img src="thumbnail (2).jpeg" alt="Rolex Cellini"> </a>
+    <h3> A Swiss luxury watch manufacturer known for its quality  and innovation.</h3>
+    <div class="specs" >
+    <p>✨ Movement: Automatic ETA 2828-2</p>
+    <p>⌚ Case Material: Square antique</p>
+    <p>🎯 Case Diameter: 44mm</p>
+    <p>💧 Water Resistance: 30ATM</p>
+    <p>🔋 Battery Life: 4 years</p>
+    <p>⚡ Power Reserve: 17 hours</p>
+    </div>
+<div class="price">1099.9$</div>
+<a href="#buy" class="button buy">Add to Cart</a>
+</div>
+<div class="product" id="Panerai Luminor">
+    <a href="/DescriptionPage/html/gmt.html"> <img src="thumbnail (3).jpeg" alt="Panerai Luminor"> </a>
+    <h3> A luxury sports watch collection that combines italian design with Swiss watch-making.</h3>
+    <div class="specs" >
+    <p>✨ Movement: Self-winding</p>
+    <p>⌚ Case Material: Square antique</p>
+    <p>🎯 Case Diameter: 44mm</p>
+    <p>💧 Water Resistance: 30ATM</p>
+    <p>🔋 Battery Life: 1 years</p>
+    <p>⚡ Power Reserve: 10 hours</p>
+    </div>
+<div class="price">890$</div>
+<a href="#buy" class="button buy">Add to Cart</a>
+</div>
+    </div>
+    
+  <!--footer section-->
+<footer class="footer">
+    <div class="footercontainer">
+        <div class="footer__col">
+          <h4>Company</h4>
+            <ul>
+              <li><a href="#">about us</a></li>
+              <li><a href="#">our brand </a></li>
+              <li><a href="#">signature artist</a></li>
+              <li><a href="#">privacy policy</a></li>
+            </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Get Help</h4>
+            <ul>
+              <li><a href="#">text support</a></li>
+              <li><a href="#">call support</a></li>
+              <li><a href="#">refund</a></li>
+              <li><a href="#">technical problem</a></li>
+            </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Online Shop </h4>
+            <ul>
+              <li><a href="#">product</a></li>
+              <li><a href="#">shop now</a></li>
+              <li><a href="#">brand</a></li>
+              <li><a href="#">Cart</a></li>
+            </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Follow Us</h4>
+            <div class="social__links">
+              <i class="fa-brands fa-square-facebook"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-youtube"></i>
+              <i class="fa-brands fa-x-twitter"></i>
+            </div>
+        </div>
+    </div>
+  </footer>
+    </div>
+</body>
+</html>
